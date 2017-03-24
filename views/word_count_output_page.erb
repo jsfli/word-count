@@ -1,0 +1,15 @@
+<h2>The sentence you inputted is "<%= @sentence1_input%>"</h2>
+<br>
+<h2>The word you inputted is "<%= @word1_input%>"</h2>
+<br>
+<h2>The word "<%= @word1_input%>" appeared  <%= @output1%> time(s)</h2>
+
+<form action="/">
+  <button type="submit" class="btn-success">Home</button>
+</form>
+
+<br>
+
+<form action="/word_count_input_page">
+  <button type="submit" class="btn-danger">Go back</button>
+</form>

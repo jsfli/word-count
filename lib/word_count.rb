@@ -4,7 +4,7 @@ class String
 
   define_method(:word_count) do |word_input|
     match_count=0
-    string_input = self
+    string_input = self.clone
     #clean out all the other characters except alphabets and space
     string_input_cleaned = string_input.downcase().delete "^a-z "
     string_input_array = string_input_cleaned.split(" ")
@@ -19,10 +19,10 @@ class String
 
   define_method(:word_count_partial) do |word_input|
     match_count=0
-    string_input = self
+    string_input = self.clone
     word_input_length = word_input.length()
 
-    #loop until string is nothing
+    #loop until string_input is nothing
     until string_input == ""
 
       #slice first section of string and compare with word input
